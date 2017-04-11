@@ -30,6 +30,11 @@
     "name": "Zoltan Kochan",
     "url": "https://www.kochan.io"
   },
+  "keywords": [
+    "monorepo",
+    "git",
+    "package"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zkochan/is-pkg-changed/issues"
