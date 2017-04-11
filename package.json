@@ -1,0 +1,63 @@
+{
+  "name": "is-pkg-changed",
+  "version": "1.0.0",
+  "description": "Detects whether package has been changed since last publish",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "pretest": "rimraf .tmp",
+    "test": "mos test && ts-node test",
+    "tsc": "tsc",
+    "prepublish": "npm run tsc",
+    "md": "mos"
+  },
+  "mos": {
+    "plugins": [
+      "readme"
+    ],
+    "installation": {
+      "useShortAlias": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zkochan/is-pkg-changed.git"
+  },
+  "author": {
+    "name": "Zoltan Kochan",
+    "url": "https://www.kochan.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zkochan/is-pkg-changed/issues"
+  },
+  "homepage": "https://github.com/zkochan/is-pkg-changed#readme",
+  "dependencies": {
+    "find-up": "^2.1.0",
+    "micromatch": "^2.3.11",
+    "nodegit": "^0.18.0",
+    "ramda": "^0.23.0",
+    "read-pkg": "^2.0.0",
+    "upath": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.12",
+    "@types/tape": "^4.2.29",
+    "execa": "^0.6.3",
+    "mkdirp-promise": "^5.0.1",
+    "mos": "^2.0.0-alpha.3",
+    "mos-plugin-readme": "^1.0.4",
+    "mz": "^2.6.0",
+    "rimraf": "^2.6.1",
+    "rimraf-then": "^1.0.1",
+    "tape": "^4.6.3",
+    "tape-promise": "^2.0.1",
+    "touch": "^1.0.0",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2",
+    "write-pkg": "^2.1.0"
+  }
+}
